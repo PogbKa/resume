@@ -1,0 +1,100 @@
+@import '../App.scss';
+
+.section-left {
+    background-color: $firtst-color;
+    h3, h4{
+        color:#ffffff;
+    }
+    width: 35%;
+    .section-image {
+        height: $base*260;
+        background: $firtst-color;
+        img {
+            width: 100%;
+        }
+    }
+    .section-educetion {
+        margin-left: $base*36;
+        margin-top: $base*28;
+        &-title {
+            padding-bottom: $base*10;
+        border-bottom: $base*1.3 solid $second-color;
+        }
+        &-main {
+            margin-left: $base*8;
+            margin-top: $base*17;
+            margin-right: $base*40;
+            margin-bottom: $base*20;
+            &-company {
+                padding-bottom: $base*4;
+                h4 {
+                    text-transform: uppercase;
+                    font-size: $base*8.2;
+                    font-weight: 600;
+                }
+            }
+            &-text {
+                a {
+                    color:$second-color;
+                    display: inline-block;
+                    transition: 1s all;
+                }
+                a:hover {
+                    padding-left: 5*$base;
+                    transform: scale(1.2,1.2);
+                    cursor: pointer;
+    
+                }
+                h4 {
+                    font-size: $base*6.4;
+                    line-height: $base*12;
+                    font-weight: 500;
+                }
+                span {
+                    padding-left: $base*2;
+                }
+            }
+        }
+    }
+    
+    .section-contact {
+        &:nth-child(4) {
+            padding-top: $base*20;
+        }
+        padding-top: $base*12;
+        
+        &-main {
+            height: $base*15;
+            background-color: #292a30;
+            display: flex;
+            flex-wrap: wrap;
+            &-block {
+                width: 20%;
+                background-color: $second-color;
+    
+            }
+            &-phone {
+                display: flex;
+                align-items: center;
+                h3 {
+                    letter-spacing : 0;
+                    font-size: $base*8;
+                    text-transform: none;
+                }
+                padding-left: $base*11;
+            }
+        }
+        &-text { 
+            a {
+                color:$second-color;
+                text-decoration: none;
+                display: inline-block;
+                transition: 1s all;
+            }
+            a:hover {transform: scale(1.1,1.1);}
+            h4{ font-size: $base*7;}
+            padding-left: $base*48;
+            padding-top: $base*2;
+        }
+    }
+}

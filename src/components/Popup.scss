@@ -1,0 +1,73 @@
+@import '../App.scss';
+
+.wraper-popup {
+    position: absolute;
+    left: -110%;
+    top: 0;
+    background-color: blanchedalmond;
+    width: 100%;
+    min-height: 100%;
+    opacity: 0.3;
+    transition: 0.5s;
+}
+
+.open-button {
+    width: $base*30;
+    height: $base*30;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: $base*1.5 solid $firtst-color;
+    position: fixed;
+    right: $base*20;
+    bottom: $base*10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    // display: none;
+    @keyframes button-call {
+        from {width: $base*35;height: $base*35; opacity: 0.8;}
+        to {width: $base*40;height: $base*40;opacity: 0;}
+    }
+}
+
+.open-button:after {
+    content:"";
+    position: absolute;
+    border-radius: 50%;
+    border: $base*1.5 solid $firtst-color;
+    animation: button-call 2s ease 1s infinite;
+}
+.open-button:hover {
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+}      
+.bi {
+    font-size: $base*22;
+    color: $firtst-color;
+    transition: 0.5s;
+}
+.form-popup {
+    // display: none;
+    position: fixed;
+    overflow: hidden;
+    right: $base*20;
+    bottom: -100%;
+    // border: 1px solid black;
+    max-width: $base*60;
+    transition: 0.5s;
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        a,button {
+            padding:  $base*3 $base*4;
+            background: none;
+            border: none;
+        }
+        // .bi-x-lg {
+        //     color: rgb(32, 32, 38,0.5);
+        // }
+    }
+}

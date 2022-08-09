@@ -1,0 +1,173 @@
+//!-------fonts------!//
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@mixin Montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+//!-------fonts------!//
+//-------FUNCTION-----------//
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+@function rem($num) {
+    @return (strip-unit($num) / 16) * 1rem;
+}
+//-------FUNCTION-----------//
+//!----------- general------------//
+body {
+    margin: 0;
+    padding: 0;
+    // background-color:rgb(27, 22, 22);
+    background:url(https://www.htmlgoodies.com/wp-content/uploads/2021/04/JavaScript.jpg);
+    position: relative;
+}
+$firtst-color: #202026;
+$second-color: #fecb00;
+$base:rem(5px);
+
+//!----------- general------------//
+h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+    @include Montserrat();
+    color: $firtst-color;
+}
+span {
+    font-weight: 500;
+}
+h2 {
+    font-size: $base*18;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+h3 {
+    font-size: $base*9;
+    line-height: 1.2;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+h4 {
+    font-size: $base*8;
+    line-height: $base*11;
+    font-weight: 500;
+}
+.wraper-out {
+    max-width: $base*320;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+// <!-- media---!>//
+@media (min-width: 1px) and (max-width: 576px) {
+    html {   
+        font-size: 2.5px;
+    }
+    body {
+        width: 100%;
+        background: none;
+    }
+    .section-right,
+    .section-left {
+        min-height: 800px;
+    }   
+    .wraper-out {
+        max-width: 420px;
+    }
+    .section-right {
+        .section-work-skill {
+        padding-left: $base*40;
+    }}
+    
+    .open-button {
+        border: transparent;
+        width: $base*60;
+        bottom: $base*30;
+        height: $base*60;
+        @keyframes button-call {
+            from {width: $base*60;height: $base*60; opacity: 0.8;}
+            to {width: $base*70;height: $base*70;opacity: 0;}
+        }
+    }
+    .bi {
+        font-size: $base*40;
+    }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+    html {   
+        font-size: 4px;
+    }
+    .wraper-out {
+        max-width: 600px;
+    }
+    .section-right {
+        .section-work-skill {
+        padding-left: $base*40;
+    }}
+    a:hover i{
+        font-size: $base*27;
+     }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    html {   
+        font-size: 4px;
+    }
+    .wraper-out {
+        max-width: 600px;
+    }
+    .section-right {
+        .section-work-skill {
+        padding-left: $base*50;
+    }}
+    a:hover i{
+        font-size: $base*27;
+     }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+    html {   
+        font-size: 6px;
+    }
+    .wraper-out {
+        max-width: 900px;
+    }
+    .section-right {
+        .section-work-skill {
+        padding-left: $base*50;
+    }}
+    a:hover i{
+        font-size: $base*27;
+     }
+}
+@media (min-width: 1200px) and (max-width: 1600px) {
+    html {   
+        font-size: 6px;
+    }
+    .wraper-out {
+        max-width: 900px;
+    }
+    .section-right {
+        .section-work-skill {
+        padding-left: $base*50;
+    }}
+    a:hover i{
+        font-size: $base*27;
+     }
+}
+@media (min-width: 1600px) {
+    html {   
+        font-size: 8px;
+    }
+    .wraper-out {
+        max-width: 1200px;
+    }
+    .section-right {
+        .section-work-skill {
+        padding-left: $base*50;
+        }
+    }
+    a:hover i{
+        font-size: $base*27;
+     }
+}
+// <!-- media---!>//
