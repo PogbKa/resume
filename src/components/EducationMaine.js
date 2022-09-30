@@ -2,6 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 
 function EducationMaine (props) {
+   
     return (
         <div className="section-educetion-main">
                     <div className="section-educetion-main-company">
