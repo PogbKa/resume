@@ -6,6 +6,7 @@ import './App.scss';
 
 
 function App() {
+  console.log(window.location.pathname)
   return (
     <section className="wraper-out">
       <SectionLeft/>
